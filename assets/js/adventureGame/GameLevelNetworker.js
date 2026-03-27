@@ -63,7 +63,7 @@ class GameLevelNetworker {
         hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
         dialogues: [
             "The terminal is a powerful tool. It's like having superpowers!",
-            "Did you know Linux powers most web servers and supercomputers?",
+            "Did you know Linux powers of the web servers and supercomputers?",
             "ls, cd, mkdir, rm - these commands will become your best friends.",
             "I love open source software! Freedom to study, modify, and share.",
             "Have you tried using pipes to connect commands? It's magical!",
