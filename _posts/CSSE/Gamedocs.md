@@ -9,7 +9,7 @@ authors: Nikhil Ekambaram
 ---
 
 <div class="flex items-center justify-center">
-  <h1 class="text-center text-4xl font-bold text-gray-100">Game Documentation</h1>
+  <h1 class="text-center text-4xl font-bold text-gray-100">Game Documentation (hi)</h1>
 </div>
 <br />
 <div class="mb-4 flex flex-col items-center justify-center space-y-4">
