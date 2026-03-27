@@ -3,7 +3,7 @@ import GamEnvBackground from './GameEngine/GameEnvBackground.js';
 import Player from './GameEngine/Player.js';
 import Npc from './GameEngine/Npc.js';
 
-class GameLevelDesert {
+class GameLevelNetworker {
   constructor(gameEnv) {
     let width = gameEnv.innerWidth;
     let height = gameEnv.innerHeight;
@@ -97,4 +97,4 @@ class GameLevelDesert {
 
 }
 
-export default GameLevelDesert;
+export default GameLevelNetworker;
