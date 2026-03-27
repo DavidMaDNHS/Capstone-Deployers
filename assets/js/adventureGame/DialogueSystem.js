@@ -196,6 +196,18 @@ class DialogueSystem {
     return this.showDialogue(randomDialogue, speaker, avatarSrc);
   }
 
+  showNextDialogue(speaker = "", avatarSrc = null) {
+    if (this.dialogues.length === 0) return;
+    let nextIndex = this.lastShownIndex + 1;
+    
+    // Store the current index to avoid repetition next time
+    this.lastShownIndex = nextIndex;
+    
+    // Show the dialogue
+    const randomDialogue = this.dialogues[nextIndex % this.dialogues.length]; 
+    return this.showDialogue(randomDialogue, speaker, avatarSrc);
+  }
+
   // Close the dialogue box
   closeDialogue() {
     if (!this.isOpen) return;

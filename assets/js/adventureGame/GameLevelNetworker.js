@@ -62,14 +62,11 @@ class GameLevelNetworker {
         down: {row: 5, start: 0, columns: 3 },
         hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
         dialogues: [
-            "The terminal is a powerful tool. It's like having superpowers!",
-            "Did you know Linux powers most web servers and supercomputers?",
-            "ls, cd, mkdir, rm - these commands will become your best friends.",
-            "I love open source software! Freedom to study, modify, and share.",
-            "Have you tried using pipes to connect commands? It's magical!",
-            "Vim or Emacs? That's the eternal question among Linux users.",
-            "The penguin mascot represents the cold conditions of Finland where Linux was developed.",
-            "Linux was created by Linus Torvalds in 1991 while he was a student."
+            "Hello, traveler! i am Tux, the Linux mascot, and my systems are used everywhere, including the internet. One of the key pieces of the internet is networking, which allows computers to communicate with each other. Do you want to learn about it? If so, interact with me again!",
+            "When you send data over the internet, your data is split into small pieces called packets.",
+            "Each packet contains not only the data you're sending but also important information like the destination address and the source address.",
+            "These packets travel through various routers, which are like traffic directors that help guide the packets, and switches across the internet to reach their destination.",
+            "Let's practice networking concepts! Talk to another NPC for some quiz questions about networking.",
         ],
         reaction: function() {
             // Use dialogue system instead of alert
@@ -82,7 +79,47 @@ class GameLevelNetworker {
         interact: function() {
             // Show random dialogue message
             if (this.dialogueSystem) {
-                this.showRandomDialogue();
+                this.showNextDialogue();
+            }
+        }
+    };
+
+    const sprite_src_quizzler = path + "/images/gamify/tux.png";
+    const sprite_greet_quizzler = "Hi I am Quizzler, the networking expert. I am very happy to help you learn about networking!";
+    const sprite_data_quizzler = {
+        id: 'Quizzler',
+        greeting: sprite_greet_quizzler,
+        src: sprite_src_quizzler,
+        SCALE_FACTOR: 8,
+        ANIMATION_RATE: 50,
+        pixels: {height: 256, width: 352},
+        INIT_POSITION: { x: (width / 4), y: (height / 4)},
+        orientation: {rows: 8, columns: 11 },
+        down: {row: 5, start: 0, columns: 3 },
+        hitbox: { widthPercentage: 0.1, heightPercentage: 0.2 },
+        dialogues: [
+            "True or False: The Internet is a network of networks",
+            "True! The Internet is a global network of interconnected networks that use the standard Internet Protocol Suite (TCP/IP) to link devices worldwide.",
+            "True or False: A router is a device that forwards data packets between computer networks",
+            "True!",
+            "True or False: Some devices on the internet do not have an IP address",
+            "False! Every device connected to the internet must have a unique IP address to communicate with other devices.",
+            "True or False: Domain names are not related to IP addresses",
+            "False! Domain names are human-readable addresses that are translated into IP addresses by the Domain Name System (DNS) to locate and access websites on the internet.",
+            "Great job on the quiz! Feel free to review the material with Tux or explore the desert for more adventures!"
+        ],
+        reaction: function() {
+            // Use dialogue system instead of alert
+            if (this.dialogueSystem) {
+                this.showReactionDialogue();
+            } else {
+                console.log(sprite_greet_quizzler);
+            }
+        },
+        interact: function() {
+            // Show random dialogue message
+            if (this.dialogueSystem) {
+                this.showNextDialogue();
             }
         }
     };
@@ -92,6 +129,7 @@ class GameLevelNetworker {
       { class: GamEnvBackground, data: image_data_desert },
       { class: Player, data: sprite_data_chillguy },
       { class: Npc, data: sprite_data_tux },
+      { class: Npc, data: sprite_data_quizzler }
     ];
   }
 

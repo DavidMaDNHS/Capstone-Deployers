@@ -165,6 +165,17 @@ class Npc extends Character {
         this.dialogueSystem.showRandomDialogue(npcName, npcAvatar);
     }
 
+    showNextDialogue() {
+        if (!this.dialogueSystem) return;
+        
+        // Get NPC name and avatar if available
+        const npcName = this.spriteData?.id || "";
+        const npcAvatar = this.spriteData?.src || null;
+        
+        // Show next dialogue
+        this.dialogueSystem.showNextDialogue(npcName, npcAvatar);
+    }
+
     // Clean up event listeners when NPC is destroyed
     destroy() {
         // Unregister from game control
