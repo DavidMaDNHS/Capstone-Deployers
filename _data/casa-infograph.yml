@@ -1,0 +1,32 @@
+# Data for the CASA capstone infographic
+Title: "Community Action, Service, and Advocacy: Website Improvement"
+Description: "Helping CASA better serve the community by improving their website and its accessibility."
+
+
+Topics:
+  - title: "Community Action, Service, and Advocacy"
+    image: "capstone/casa-logo.avif"
+    link: "/capstone/casa/"
+    alt: "Community Action, Service, and Advocacy: Website Improvement"
+    keyPoints:
+      - "Revise home page to be more engaging and informative"
+      - "Improve accessibility and user experience"
+      - "Implement login system to allow people to keep track of their contributions and progress"
+      - "Add chatbot to assits users with questions and provide information about CASA's services"
+    subtitle: "Helping CASA better serve the community by improving their website and its accessibility."
+    description: "A design-based research capstone that revises the CASA website to be more engaging, informative, and accessible. Along with UI improvement, the project includes a login system for users to track their contributions and progress, as well as a chatbot to assist users with questions and provide information about CASA's services."
+    tech:
+      - "Polished, easy-to-access frontend interface"
+      - "Interactive chatbot to assist users with questions"
+      - "Login system for users to track their contributions and progress"
+      - "Improved accessibility features to make the website more inclusive"
+    impact:
+      - "Helps CASA with their cause"
+      - "Increases awareness of CASA's services and mission"
+      - "Provides new opportunities for community engagement and support"
+      - "Helps communities improve in the long run"
+    status: "In Development"
+    team:
+      - "West Stefany"
+      - "Sloane Sommers"
+      - "David Ma"

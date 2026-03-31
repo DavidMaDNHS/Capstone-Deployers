@@ -1,0 +1,77 @@
+{% assign data = site.data.casa-infograph %}
+
+
+<div class="casa-infograph">
+ <!-- Header Section -->
+ <div class="casa-header">
+   <div class="casa-badge">Design-Based Research Capstone</div>
+   <h1 class="casa-title">{{ data.Title }}</h1>
+   <p class="casa-description">{{ data.Description }}</p>
+ </div>
+
+
+ <!-- Project Cards -->
+ {% for topic in data.Topics %}
+ <div class="casa-card">
+   <div class="casa-card-grid">
+    
+     <!-- Left: Image & Status -->
+     <div class="casa-visual">
+       <a href="{{ site.baseurl }}{{ topic.link }}" class="casa-image-link">
+         <img src="{{ site.baseurl }}/images/{{ topic.image }}" alt="{{ topic.alt }}" class="casa-image">
+         <div class="casa-overlay">
+           <span>View Project</span>
+         </div>
+       </a>
+       <div class="casa-status">{{ topic.status }}</div>
+       <div class="casa-team">
+         <span class="casa-team-label">Project Leads</span>
+         <span class="casa-team-name">{{ topic.team | join: ", " }}</span>
+       </div>
+     </div>
+
+
+     <!-- Center: Key Points -->
+     <div class="casa-content">
+       <h2 class="casa-project-title">{{ topic.title }}</h2>
+       <p class="casa-subtitle">{{ topic.subtitle }}</p>
+      
+       <div class="casa-keypoints">
+         {% for point in topic.keyPoints %}
+         <div class="casa-keypoint">
+           <span class="casa-check">✓</span>
+           <span>{{ point }}</span>
+         </div>
+         {% endfor %}
+       </div>
+
+
+       <div class="casa-tech-stack">
+         {% for tech in topic.tech %}
+         <span class="casa-tech-tag">{{ tech }}</span>
+         {% endfor %}
+       </div>
+     </div>
+
+
+     <!-- Right: Description & Impact -->
+     <div class="casa-details">
+       <h3 class="casa-section-title">About</h3>
+       <p class="casa-about">{{ topic.description }}</p>
+      
+       <h3 class="casa-section-title">Impact</h3>
+       <div class="casa-impact-list">
+         {% for item in topic.impact %}
+         <div class="casa-impact-item">{{ item }}</div>
+         {% endfor %}
+       </div>
+
+
+       <a href="{{ site.baseurl }}{{ topic.link }}" class="casa-btn">Learn More</a>
+     </div>
+
+
+   </div>
+ </div>
+ {% endfor %}
+</div>
